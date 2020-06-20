@@ -2331,12 +2331,12 @@ class FPDF
 	}
 	function RC4($key, $data)
     {
-        if(function_exists('mcrypt_encrypt'))
+        /*if(function_exists('mcrypt_encrypt'))
         {
             return mcrypt_encrypt(MCRYPT_ARCFOUR, $key, $data, MCRYPT_MODE_STREAM, '');
         }
         else
-        {
+        { */
             static $last_key, $last_state;
 
             if($key != $last_key)
@@ -2371,7 +2371,7 @@ class FPDF
             }
             return $out;
         }
-    }
+    /*} */
 
 }
 ?>
